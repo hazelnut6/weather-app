@@ -64,7 +64,8 @@ main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     border-radius: 10px;
-    /* border: 1px solid black; */
+    visibility: hidden;
+    border: 1px solid black;
 }
 
 .weatherIcon,
@@ -82,8 +83,8 @@ main {
 
 .weatherTemp {
     grid-column: 2/3;
-    /* border-left: 1px solid black; */
-    /* border-right: 1px solid black; */
+    border-left: 1px solid black;
+    border-right: 1px solid black;
 }
 
 .tempDegree {
