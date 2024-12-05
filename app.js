@@ -14,10 +14,10 @@ form.addEventListener('submit', async (e) => {
             displayData(data);
         } catch(error) {
             console.log(error)
-            // display error
+            displayError(error);
         }
     } else {
-        // display error
+        displayError('Please type city a name');
     }
 });
 
@@ -27,7 +27,7 @@ async function weatherData(cityName) {
     const response = await fetch(weatherUrl, {mode: 'cors'});
 
     if(!response.ok) {
-        throw new Error('Could not find')
+        throw new Error(`Could not find "${cityName}"`)
     }
     
     return await response.json();
@@ -100,5 +100,7 @@ function displayData(data) {
 }
 
 // Display error
-
+function displayError(message) {
+    alert(message);
+}
 
