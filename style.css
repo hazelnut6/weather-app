@@ -79,6 +79,15 @@ main {
 
 .weatherIcon {
     grid-column: 1/2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.iconSvg {
+    height: 150px;
+    width: 150px;
 }
 
 .weatherTemp {
