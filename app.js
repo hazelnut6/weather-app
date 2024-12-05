@@ -37,7 +37,7 @@ async function weatherData(cityName) {
 function displayData(data) {
 
     // Data destructuring
-    const {address: city, currentConditions: {humidity, icon, temp}, description: description} = data;
+    const {address: city, currentConditions: {conditions, humidity, icon, temp}, description: description} = data;
 
     // Display
     weatherDiv.textContent = "";
@@ -49,6 +49,18 @@ function displayData(data) {
     weatherDiv.appendChild(weatherIcon);
 
     // Icon
+    const iconSvg = document.createElement('img');
+    iconSvg.classList.add('iconSvg');
+    const iconName = icon;
+    iconSvg.setAttribute('src', `imgs/${iconName}.svg`);
+    iconSvg.setAttribute('title', iconName);
+    weatherIcon.appendChild(iconSvg);
+
+    // Icon desc
+    const iconDesc = document.createElement('p');
+    iconDesc.classList.add('iconDesc');
+    iconDesc.textContent = conditions;
+    weatherIcon.appendChild(iconDesc);
 
     // Temp div
     const weatherTemp = document.createElement('div');
