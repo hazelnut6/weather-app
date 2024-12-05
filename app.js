@@ -35,7 +35,6 @@ async function weatherData(cityName) {
 
 // Display data
 function displayData(data) {
-
     // Data destructuring
     const {address: city, currentConditions: {conditions, humidity, icon, temp}, description: description} = data;
 
@@ -83,7 +82,8 @@ function displayData(data) {
     // City
     const weatherCity = document.createElement('p');
     weatherCity.classList.add('weatherCity');
-    weatherCity.textContent = city;
+    const capitalize = city.charAt(0).toUpperCase() + city.slice(1);
+    weatherCity.textContent = capitalize;
     weatherDetails.appendChild(weatherCity);
 
     // Humidity
