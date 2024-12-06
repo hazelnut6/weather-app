@@ -6,6 +6,12 @@
     font-family: sans-serif;
 }
 
+body {
+    background-image: url("imgs/bg-img.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
 .container {
     height: 100dvh;
     height: 100vh;
@@ -18,6 +24,7 @@
 header {
     height: 12vh;
     width: 100vw;
+    background-color: transparent;
     /* border: 1px solid black; */
     display: flex;
     justify-content: center;
@@ -26,13 +33,14 @@ header {
 }
 
 .webName {
+    color: white;
     font-size: 2.5rem;
     font-weight: 700;
 }
 
 main {
-    margin-top: 12vh;
-    height: 88vh;
+    padding-top: 12vh;
+    height: 100vh;
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -47,6 +55,8 @@ main {
     padding: 8px;
     border-radius: 5px;
     outline: none;
+    border-style: none;
+    border: 1px solid black;
 }
 
 #submitBtn {
@@ -56,15 +66,22 @@ main {
     padding: 8px;
     border-radius: 5px;
     cursor: pointer;
+    border-style: none;
+    background-color: hsl(248, 27%, 70%);
+}
+
+#submitBtn:hover {
+    background-color: hsl(248, 27%, 79%);
 }
 
 #weatherDiv {
     height: 30vh;
-    width: 35vw;
+    width: 40vw;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     border-radius: 10px;
     visibility: hidden;
+    background-color: hsl(0, 0%, 90%);
     border: 1px solid black;
 }
 
@@ -83,6 +100,7 @@ main {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    gap: 5px;
 }
 
 .iconSvg {
@@ -114,4 +132,8 @@ main {
 
 .weatherHumidity {
     padding-bottom: 10px;
+}
+
+footer p {
+    padding: 10px;
 }
