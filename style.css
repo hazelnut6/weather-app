@@ -144,6 +144,9 @@ footer p {
 
 /* Small media query */
 @media only screen and (width < 43.75em) { /* 700px */ 
+    header {
+        text-align: center;
+    }
     #form {
         display: flex;
         justify-content: center;
