@@ -55,6 +55,7 @@ main {
     padding: 8px;
     border-radius: 5px;
     outline: none;
+    background-color: hsl(0, 0%, 90%);
     border-style: none;
     border: 1px solid black;
 }
@@ -76,7 +77,7 @@ main {
 
 #weatherDiv {
     height: 30vh;
-    width: 40vw;
+    width: 40%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     border-radius: 10px;
@@ -136,4 +137,60 @@ main {
 
 footer p {
     padding: 10px;
+}
+
+/* Small media query */
+@media only screen and (width < 43.75em) { /* 700px */ 
+    #form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    #weatherDiv {
+        height: 55vh;
+        width: 80%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .weatherIcon {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+
+    .iconSvg {
+        height: 100px;
+        width: 100px;
+    }
+
+    .weatherTemp { 
+        grid-column: 2/-1;
+        grid-row: 1/2;
+        border-right: none;
+    }
+
+    .tempDegree {
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+
+    .weatherDetails {
+        grid-column: 1/-1;
+        grid-row: 2/-1;
+        border-top: 1px solid black;
+    }
+
+    footer p {
+        text-align: center;
+    }
+}
+
+/* Medium media query */
+@media only screen and (43.75em < width < 62em) { /* 992px */  
+    #weatherDiv {
+        width: 80%;
+    }
 }
