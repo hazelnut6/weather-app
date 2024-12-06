@@ -1,3 +1,10 @@
+:root {
+    --border: 1px solid black;
+    --white-bg: hsl(0, 0%, 90%);
+    --btn-bg: hsl(248, 27%, 70%);
+    --btn-hover: hsl(248, 27%, 79%);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -25,7 +32,6 @@ header {
     height: 12vh;
     width: 100vw;
     background-color: transparent;
-    /* border: 1px solid black; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -47,7 +53,6 @@ main {
     align-items: center;
     flex-direction: column;
     gap: 50px;
-    /* border: 1px solid black; */
 }
 
 #inputBar {
@@ -55,24 +60,23 @@ main {
     padding: 8px;
     border-radius: 5px;
     outline: none;
-    background-color: hsl(0, 0%, 90%);
+    background-color: var(--white-bg);
     border-style: none;
-    border: 1px solid black;
+    border: var(--border);
 }
 
 #submitBtn {
-    /* border-style: none; */
+    border-style: none;
     font-size: 1.1rem;
     font-weight: 700;
     padding: 8px;
     border-radius: 5px;
     cursor: pointer;
-    border-style: none;
-    background-color: hsl(248, 27%, 70%);
+    background-color: var(--btn-bg);
 }
 
 #submitBtn:hover {
-    background-color: hsl(248, 27%, 79%);
+    background-color: var(--btn-hover);
 }
 
 #weatherDiv {
@@ -82,8 +86,8 @@ main {
     grid-template-columns: repeat(3, 1fr);
     border-radius: 10px;
     visibility: hidden;
-    background-color: hsl(0, 0%, 90%);
-    border: 1px solid black;
+    background-color: var(--white-bg);
+    border: var(--border);
 }
 
 .weatherIcon,
@@ -92,7 +96,6 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border: 1px solid black; */
 }
 
 .weatherIcon {
@@ -111,8 +114,8 @@ main {
 
 .weatherTemp {
     grid-column: 2/3;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
+    border-left: var(--border);
+    border-right: var(--border);
 }
 
 .tempDegree {
@@ -180,7 +183,7 @@ footer p {
     .weatherDetails {
         grid-column: 1/-1;
         grid-row: 2/-1;
-        border-top: 1px solid black;
+        border-top: var(--border);
     }
 
     footer p {
