@@ -139,6 +139,7 @@ main {
 }
 
 footer p {
+    color: white;
     padding: 10px;
 }
 
@@ -147,6 +148,11 @@ footer p {
     header {
         text-align: center;
     }
+
+    .webName {
+        font-size: 2rem;
+    }
+
     #form {
         display: flex;
         justify-content: center;
